@@ -14,6 +14,8 @@
                 <li><a id = "nav" href="#head_st">About Me</a></li>
                 <li><a id = "nav" href="#head">Portfolio</a></li>
                 <li><a id = "nav" href="#head_end">Contact Me</a></li>
+                <li><form action="/Homework_week_2/GPT.html" target="_blank">
+                    <button onclick="changeColor()" id = "Homework">Homework</button></form></li>
             </ul>
         </nav>
     </header>
@@ -50,5 +52,11 @@
         </ul>
     </div>
     </main> 
+    <script>
+document.getElementById("Homework").style.backgroundColor ="#ff8000";
+document.getElementById("Homework").onclick = function(){
+            this.style.backgroundColor ="gray";
+        };
+    </script>
 </body>
 </html>
