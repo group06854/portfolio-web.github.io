@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: white;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(26,14,1,1) 100%);
+}
+#head_st{
+    color: white;
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+#head{
+    color: white;
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+#head_end{
+    color: white;
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+a{
+    text-decoration: none;
+    color:aliceblue;
+}
+img{
+    max-width: 100%;
+}
+
+.container{
+    margin-top: 1px;
+    width: 98%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+}
+header{
+    padding: 10px;
+    margin-bottom: 40px;
+}
+header .logo{
+    width: 10%;
+    font-weight: 800;
+    text-transform: uppercase; 
+    color: white;
+}
+header ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav{
+    float: right;
+    width: 30%;
+}
+header nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+header ul li{
+    display: inline-block;
+}
+#nav{
+    color: white;
+}
+#Homework{
+    border: 2px solid transparent;
+    background-color: #ff8000;
+    color: white;
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    transform:translate(0,-3px);
+    
+}
+#information{
+    width: 50%;
+    margin-left: 5%;
+    margin-top: 40px;
+    height: 400px;
+    text-align: center;
+}
+#portfolio{
+    position: absolute;
+    top: 135px;
+    right: 5%;
+
+}
+.window{
+    width: 45%;
+    display: inline-block;
+    padding: 8px;
+    border-width: 1px;
+  border-color: grey;
+  border-style: solid;
+    border-radius: 5%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+.window img{
+    border-radius: 4%;
+}
+#github{
+    text-align: right;
+    font-weight: 800;
+}
+.Portfolio-information ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.footer ul{
+    list-style: none;
+    display: flex;
+    margin-left: 40%;
+    margin-right: 40%;
+    justify-content: space-between;
+
+}
+.footer{
+    height: 100px;
+
+}
