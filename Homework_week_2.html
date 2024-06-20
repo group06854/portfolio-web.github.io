@@ -59,6 +59,10 @@ function formatText(text) {
 
     findnum("https://fwd.innopolis.university/api/hw2?email=l.permiakov@innopolis.university")
     .then((text) =>{scrapeContent('https://fwd.innopolis.university/api/comic?id='+text)})
+        document.getElementById("Homework").style.backgroundColor ="#ff8000";
+document.getElementById("Homework").onclick = function(){
+            this.style.backgroundColor ="gray";
+        };
     </script>
 </body>
 </html>
