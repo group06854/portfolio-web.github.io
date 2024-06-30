@@ -1,4 +1,4 @@
-import { format, formatDistance, formatRelative, getDate } from 'date-fns'
+import {formatDistance} from 'date-fns'
 
 interface comic{
     month: string
@@ -16,22 +16,21 @@ interface comic{
 
 
 function changeColor(color: string): void {
-    const name: HTMLElement | null = document.querySelector('#name');
+    const name: HTMLElement | null = document.getElementById('Homework');
     if (name) {
-        name.style.color = '#808080';
+        name.style.backgroundColor = color;
     }
 }
-async function findnum(url: string): Promise<string | null> {
+async function findnum(url: string): Promise<string | null | undefined> {
+    try{
     const response = await fetch(url);
     const text = await response.text();
     return text;
+    }catch{}
 }
 async function scrapeContent(url: string){
     const response = await fetch(url)
-    .then((response: Response) => {
-            return response.json()
-    })
-    .then((content : comic) =>{
+    const content: comic = await response.json();
         let year : number = Number(content.year);
         let month : number = Number(content.month);
         let day : number = Number(content.day);
@@ -56,7 +55,8 @@ async function scrapeContent(url: string){
                 real_data.textContent = ago;
             }
         }
-    })
 }
 findnum("https://fwd.innopolis.university/api/hw2?email=l.permiakov@innopolis.university")
 .then((text) =>{scrapeContent('https://fwd.innopolis.university/api/comic?id='+text)})
+changeColor("#ff8000")
+
