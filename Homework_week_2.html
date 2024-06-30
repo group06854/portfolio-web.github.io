@@ -10,55 +10,10 @@
     <div class="main">
         <img id="image" src="" alt="">
         <div id = "data"></div>
+        <div id ="nowdata"></div>
         <form action="https://group06854.github.io/portfolio-web.github.io/" target="_blank">
             <button onclick="changeColor('grey')" id = "Homework">Homework</button>
     </div>
-
-    <script>
-        function changeColor(color) {
-   name.style.color = color;
-}
-async function findnum(url) {
-    try {
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error(`HTTP error status: ${response.status}`);
-        }
-        const text = await response.text();
-        return text; // Возвращаем текст ответа
-    } catch (error) {
-        console.error('Error fetching data:', error);
-        return null; // Возвращаем null в случае ошибки
-    }
-};
-function formatText(text) {
-    let formattedText = text.replace(/\n/g, '<br>');
-        formattedText = formattedText.replace(/\[\[/g, '');
-    
-    return formattedText;
-}
-        async function scrapeContent(url) {
-            try {
-                const response = await fetch(url);
-                if (!response.ok) throw new Error(`Ошибка при получении страницы: ${response.statusText}`);
-
-                const content = await response.json();
-                console.log(content);
-                document.getElementById('title').textContent = content.safe_title;
-                document.getElementById('image').alt = content.alt;
-                document.getElementById('image').src = content.img;
-                const dateString = `${content.month}/${content.day}/${content.year}`;
-                const dateObject = new Date(dateString);
-                const formattedDate = dateObject.toLocaleDateString();
-                document.getElementById("data").textContent = formattedDate;
-            } catch (error) {
-                console.error('Ошибка скрапинга:', error);
-                document.getElementById('content').textContent = 'Произошла ошибка при загрузке страницы.';
-            }
-        }
-
-    findnum("https://fwd.innopolis.university/api/hw2?email=l.permiakov@innopolis.university")
-    .then((text) =>{scrapeContent('https://fwd.innopolis.university/api/comic?id='+text)})
-    </script>
+    <script type="module" src="./dist/bundle.js"> </script>
 </body>
 </html>
